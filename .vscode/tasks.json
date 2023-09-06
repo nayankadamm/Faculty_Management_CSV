@@ -1,0 +1,31 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+	  {
+		"label": "Build",
+		"type": "shell",
+		"command": "g++",
+		"args": [
+		  "-std=c++0x",
+		  "-o",
+		  "nayan",
+		 "admin.cpp",
+         "faculty.cpp",
+         "main.cpp",
+		  "-I/usr/local/mysql-connector-c++-8.0.33/include/jdbc",
+		  "-L/usr/local/mysql-connector-c++-8.0.33/lib64",
+		  "-lmysqlcppconn"
+		],
+		"group": {
+		  "kind": "build",
+		  "isDefault": true
+		}
+	  },
+	  {
+		"label": "Run",
+		"type": "shell",
+		"command": "${fileDirname}/${fileBasenameNoExtension}"
+	  }
+	]
+  }
+  
